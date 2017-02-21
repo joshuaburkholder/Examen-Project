@@ -4,13 +4,26 @@ import {Navbar, Nav, NavItem, NavDropdown, DropdownButton, MenuItem, Collapsible
 	class NavBarHeader extends Component {
 		render() {
 			return (
-					<nav className="navbar navbar-light">
-						<ul className="nav navbar-nav">
-							<li className="nav-item">
-								<button>Sign In</button>
-							</li>
-						</ul>
-					</nav>
+				<Navbar>
+					<Navbar.Header>
+						<Navbar.Brand>
+							<a href="#">BucketList</a>
+						</Navbar.Brand>
+					</Navbar.Header>
+				<Nav>
+					<NavItem eventKey={1} href="#">Sign In</NavItem>
+					<NavItem eventKey={2} href="#">Sign Up</NavItem>
+
+					<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+						<MenuItem eventKey={3.1}>Action</MenuItem>
+						<MenuItem eventKey={3.2}>Another Action</MenuItem>
+						<MenuItem eventKey={3.3}>Something Else</MenuItem>
+							<MenuItem divider />
+						<MenuItem eventKey={3.3}>Separated Link</MenuItem>
+					</NavDropdown>
+				</Nav>
+
+				</Navbar>
 				);
 		}
 	}
