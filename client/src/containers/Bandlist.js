@@ -28,8 +28,8 @@ function mapStateToProps(state){
 	};
 }
 
-function mapDispatchToProps(dispatch){
-	return bindActionCreators({ selectBand: selectBand }, dispatch);
-}
+// function mapDispatchToProps(dispatch){
+// 	return bindActionCreators({ selectBand: selectBand }, dispatch);
+// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandList);
