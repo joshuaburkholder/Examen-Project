@@ -10,6 +10,7 @@ import BandList from '../containers/BandList';
 				<div>
 				  <NavBarHeader />
 				  <Video />
+				  <BandList />
 				</div>
 			);
 		}
