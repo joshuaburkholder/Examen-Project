@@ -13,6 +13,25 @@ class BandList extends Component{
 		});
 	}
 
+	constructor(props) {
+		super(props);
+		this.state = {
+			band: [],
+			selectedBand: null
+		};
+	
+		this.bandSearch('Select a band!');
+		  
+	}
+
+	bandSelect(bandName){
+		console.log(bandName);
+		this.setState({
+			band: band,
+			selectedBand: selectedBand
+		});
+	}
+
 	render() {
 		return(
 		<ul className="list-group col-sm-4">
