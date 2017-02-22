@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import BandsReducer from './reducer_bands';
+import TodoitemReducer from './reducer_todo_item';
+import Todocategory from './reducer_todo_category';
 
 //Define the properties of our App State here
 
 	const rootReducer = combineReducers({
-		bands: BandsReducer,
+		todoitem: TodoitemReducer,
+		todocategory: TodocategoryReducer,
 	});
 
 	export default rootReducer;
