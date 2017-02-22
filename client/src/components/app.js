@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBarHeader from './Nav';
 import Video from './video/video';
-import TodoList from '../containers/TodoList'
+import BandList from '../containers/BandList'
 
 	export default class App extends Component {
 		render(){
@@ -9,7 +9,7 @@ import TodoList from '../containers/TodoList'
 			return (
 				<div>
 				  <NavBarHeader />
-				  <TodoList />
+				  <BandList />
 				</div>
 			);
 		}
