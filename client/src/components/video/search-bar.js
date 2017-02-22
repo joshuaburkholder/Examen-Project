@@ -4,14 +4,14 @@ class SearchBar extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = { term: 'bucket list' };
+		this.state = { term: 'best song ever' };
 	}
 	render() {
 		return (
 
 				<div className="search-bar">
 					<label className="vidSearchLbl">
-						Get Inspired
+						Get Inspired:
 					</label>
 				<input 
 					value = {this.state.term}

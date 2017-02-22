@@ -11,7 +11,6 @@ import Video from './video/video';
 				  <NavBarHeader />
 				  <Video />
 				</div>
-
-				);
+			);
 		}
 	}
