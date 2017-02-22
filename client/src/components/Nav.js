@@ -19,7 +19,7 @@ import {Navbar, Nav, NavItem, NavDropdown, DropdownButton, MenuItem, Collapsible
 						<MenuItem eventKey={3.2}>Another Action</MenuItem>
 						<MenuItem eventKey={3.3}>Something Else</MenuItem>
 							<MenuItem divider />
-						<MenuItem eventKey={3.3}>Separated Link</MenuItem>
+						<MenuItem eventKey={3.3} href="/newlist">Separated Link</MenuItem>
 					</NavDropdown>
 				</Nav>
 

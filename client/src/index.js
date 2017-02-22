@@ -7,6 +7,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './components/app';
 import Signin from './components/auth/signin'
 import reducers from './reducers';
+import ListItem from './components/list/new-list-item'
 
 // import { reduxForm } from 'redux-form';
 // import ListItem from './components/list/new-list-item'
@@ -19,6 +20,7 @@ ReactDOM.render(
 		<Router history={browserHistory}>
 			<Route path="/" component={App}>
 				<Route path="signin" component={Signin} />
+				<Route path="newlist" component={ListItem} />
 			</Route>
 		</Router>
 	</Provider>
