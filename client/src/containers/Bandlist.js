@@ -32,4 +32,4 @@ function mapDispatchToProps(dispatch){
 	return bindActionCreators({ selectBand: selectBand }, dispatch);
 }
 
-export default connect(mapStateToProps)(BandList);
+export default connect(mapStateToProps, mapDispatchToProps)(BandList);
