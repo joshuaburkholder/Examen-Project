@@ -25,12 +25,12 @@ import { Link } from 'react-redux';
 					</Navbar.Header>
 				  <Nav>
 					{this.renderLinks()}
-					<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-						<MenuItem eventKey={3.1}>Action</MenuItem>
-						<MenuItem eventKey={3.2}>Another Action</MenuItem>
-						<MenuItem eventKey={3.3}>Something Else</MenuItem>
+					<NavDropdown key={3} title="Cool Stuff" id="basic-nav-dropdown">
+						<MenuItem key={3.1}>Action</MenuItem>
+						<MenuItem key={3.2}>Another Action</MenuItem>
+						<MenuItem key={3.3}>Something Else</MenuItem>
 							<MenuItem divider />
-						<MenuItem eventKey={3.3} href="/newlist">Separated Link</MenuItem>
+						<MenuItem key={3.3} href="/newlist">Separated Link</MenuItem>
 					</NavDropdown>
 				  </Nav>
 				</Navbar>

@@ -29,4 +29,3 @@ ReactDOM.render(
 	,document.querySelector('.container'));
 		
 
-// <Route path="newitem" component={ListItem} />
