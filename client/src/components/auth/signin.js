@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-// import { Link } from 'react-router';
+import { Link } from 'react-router';
 
 class Signin extends Component{
 	handleFormSubmit({ email, password }) {
