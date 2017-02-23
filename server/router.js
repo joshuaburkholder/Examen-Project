@@ -10,12 +10,12 @@ var requireAuth = passport.authenticate('jwt', { session: false });
 var requireSignin = passport.authenticate('local', { session: false });
 
 	app.get('/', requireAuth, function(req, res){
-			res.send("HELLOOOOOO HOMEPAGE");
-			//res.send({hi: 'there'});
-	})
+			res.send({message: 'hey'});
+	});
 
 	app.post('/signup', Auth.signup);
 	app.post('/signin', requireSignin, Auth.signin);
-
 }
+
+
 

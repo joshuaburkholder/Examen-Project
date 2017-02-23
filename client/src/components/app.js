@@ -11,7 +11,6 @@ import Signin from './auth/signin';
 				<div>
 				  <NavBarHeader />
   				  <Video />
-  				  <Signin />
    				  {this.props.children}
 
 				</div>

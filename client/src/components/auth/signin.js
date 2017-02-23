@@ -34,5 +34,5 @@ class Signin extends Component{
 
 export default reduxForm({
 	form: 'signin', fields: ['email', 'password']
-})(Signin);
+}, null, actions)(Signin);
 
