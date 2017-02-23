@@ -16,6 +16,12 @@ export function authError(error){
 	};
 }
 
+export function signoutUser(){
+	localStorage.removeItem('token');
+
+	return {type: UNAUTH_USER};
+}
+
 export function signinUser({ email, password }){
 	return function(dispatch){
 		axios.post(`${ROOT_URL}/signin`, {email, password})
