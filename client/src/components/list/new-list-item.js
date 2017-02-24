@@ -34,7 +34,7 @@ class ListItem extends Component{
 				<textarea type="text" rows="8" className="form-control text" {...content} />
 			</fieldset>
 
-			<button type="submit" className="btn btn-primary">Submit</button>
+			<button action="submit" className="btn btn-primary">Submit</button>
 			<button className="btn btn-danger"> Cancel</button>
 		</form>
 		);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-// import { Link } from 'react-router';
+import { Link } from 'react-router';
 import * as actions from '../../actions';
 
 class Signin extends Component{
@@ -26,7 +26,7 @@ class Signin extends Component{
 
 			return(
 			  <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-				<fieldset className="form group">
+				<fieldset className="form-group">
 					<label>Email:</label>
 					<input {...email} className="form-control" />
 				</fieldset>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import NavBarHeader from './Nav';
 import Video from './video/video';
 import Signin from './auth/signin';
+import Signup from './auth/signup';
+
 // import ListItem from './list/new-list-item';
 
 	export default class App extends Component {
@@ -12,7 +14,6 @@ import Signin from './auth/signin';
 				  <NavBarHeader />
   				  <Video />
    				  {this.props.children}
-
 				</div>
 			);
 		}
