@@ -6,12 +6,21 @@ import { Link } from 'react-redux';
 	class NavBarHeader extends Component {
 		renderLinks(){
 			if(this.props.authenticated){
-				return <NavItem href="/signout">Sign Out</NavItem>
+				return [
+					<NavItem href="/signout">Sign Out</NavItem>,
+					<NavDropdown key={3} title="Cool Stuff" id="basic-nav-dropdown">
+						<MenuItem key={3.1}>Action</MenuItem>
+						<MenuItem key={3.2}>Another Action</MenuItem>
+						<MenuItem key={3.3}>Something Else</MenuItem>
+							<MenuItem divider />
+						<MenuItem key={3.3} href="/newlist">Separated Link</MenuItem>
+					</NavDropdown>								
+				] 
 			}else{
 				return [
 					<NavItem key={1} href="/signin">Sign In</NavItem>,
-					<NavItem key={2} href="#">Sign Up</NavItem>
-				];
+					<NavItem key={2} href="/signup">Sign Up</NavItem>
+					];
 			}
 		}
 
@@ -25,13 +34,7 @@ import { Link } from 'react-redux';
 					</Navbar.Header>
 				  <Nav>
 					{this.renderLinks()}
-					<NavDropdown key={3} title="Cool Stuff" id="basic-nav-dropdown">
-						<MenuItem key={3.1}>Action</MenuItem>
-						<MenuItem key={3.2}>Another Action</MenuItem>
-						<MenuItem key={3.3}>Something Else</MenuItem>
-							<MenuItem divider />
-						<MenuItem key={3.3} href="/newlist">Separated Link</MenuItem>
-					</NavDropdown>
+
 				  </Nav>
 				</Navbar>
 				);
