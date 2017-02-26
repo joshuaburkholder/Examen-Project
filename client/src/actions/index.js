@@ -29,7 +29,7 @@ export function signinUser({ email, password }){
 				dispatch({ type: AUTH_USER });
 
 				localStorage.setItem('token', response.data.token);
-				browserHistory.push('/newlist');
+				browserHistory.push('/newitem');
 			})
 			.catch(response => dispatch(authError("Bad login info")));
 	}
@@ -42,7 +42,7 @@ export function signupUser({ email, password }){
 		  	dispatch({ type: AUTH_USER });
 
 		  	localStorage.setItem('token', response.data.token);
-		  	browserHistory.push('/newlist');
+		  	browserHistory.push('/newitem');
 		  })
 		  .catch(response => dispatch(authError(response.data.error)));
 	}

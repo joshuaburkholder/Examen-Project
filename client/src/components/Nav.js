@@ -13,7 +13,7 @@ import { Link } from 'react-redux';
 						<MenuItem key={3.2}>Another Action</MenuItem>
 						<MenuItem key={3.3}>Something Else</MenuItem>
 							<MenuItem divider />
-						<MenuItem key={3.3} href="/newlist">Separated Link</MenuItem>
+						<MenuItem key={3.3} href="/newitem">Separated Link</MenuItem>
 					</NavDropdown>								
 				] 
 			}else{

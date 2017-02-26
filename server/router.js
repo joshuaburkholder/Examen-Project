@@ -1,20 +1,18 @@
-module.exports = function(app){
 
-	var Auth = require('./controllers/auth');
-	var passportService = require('./services/passport');
-	var passport = require('passport');
+var Auth = require('./controllers/auth');
+var BucketList = require('./controllers/bucketlistcontroller');
 
-	// var User = require('./models/user');
+var passportService = require('./services/passport');
+var passport = require('passport');
 
 var requireAuth = passport.authenticate('jwt', { session: false });
 var requireSignin = passport.authenticate('local', { session: false });
 
-	app.get('/', requireAuth, function(req, res){
-			res.send({message: 'hey'});
-	});
+module.exports = function(app){
 
 	app.post('/signup', Auth.signup);
 	app.post('/signin', requireSignin, Auth.signin);
+	app.post('/newitem', BucketList.addBucketList);
 }
 
 
