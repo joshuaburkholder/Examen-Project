@@ -11,9 +11,10 @@ import Signin from './components/auth/signin';
 import Signout from './components/auth/signout';
 
 import Signup from './components/auth/signup';
-
+import RequireAuth from './components/auth/require_auth';
+import ListItem from './components/list/new-list-item';
 import reducers from './reducers';
-import ListItem from './components/list/new-list-item'
+
 
 // import { reduxForm } from 'redux-form';
 // import ListItem from './components/list/new-list-item'
@@ -26,7 +27,7 @@ ReactDOM.render(
 		<Router history={browserHistory}>
 			<Route path="/" component={App}>
 				<Route path="signin" component={Signin} />
-				<Route path="newitem" component={ListItem} />
+				<Route path="newitem" component={RequireAuth(ListItem)} />
 				<Route path="signup" component={Signup} />
 				<Route path="signout" component={Signout} />
 			</Route>
