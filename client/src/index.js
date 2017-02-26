@@ -12,12 +12,12 @@ import Signout from './components/auth/signout';
 
 import Signup from './components/auth/signup';
 import RequireAuth from './components/auth/require_auth';
-import ListItem from './components/list/new-list-item';
+import ListItems from './components/list/new-list-item';
+import ListShow from './components/list/list-items';
 import reducers from './reducers';
 
 
 // import { reduxForm } from 'redux-form';
-// import ListItem from './components/list/new-list-item'
 
 
 var createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
@@ -27,9 +27,10 @@ ReactDOM.render(
 		<Router history={browserHistory}>
 			<Route path="/" component={App}>
 				<Route path="signin" component={Signin} />
-				<Route path="newitem" component={RequireAuth(ListItem)} />
 				<Route path="signup" component={Signup} />
 				<Route path="signout" component={Signout} />
+				<Route path="newitem" component={RequireAuth(ListItems)} />
+				<Route path="items" component={RequireAuth(ListShow)} />								
 			</Route>
 		</Router>
 	</Provider>
