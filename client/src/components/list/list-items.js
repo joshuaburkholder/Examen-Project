@@ -4,7 +4,7 @@ import { fetchPosts } from '../../actions/index';
 import { Link } from 'react-router';
 import axios from 'axios';
 
-const ROOT_URL = 'http://localhost: 3000';
+const ROOT_URL = 'http://localhost:3000';
 const config = {
 	headers: { authorization: localStorage.getItem('token') }
 }
@@ -32,8 +32,8 @@ class ListItems extends Component {
 		return this.state.posts.map((post) => {
 			return (
 				<li className="list-group-item" key={post._id}>
-				  <Link to={"lists/" + post._id}>
-				  	<span className="pull-xs-left">{post.topic}</span>
+				  <Link to={"items/" + post._id}>
+
 				  	<span className="pull-xs-right"><strong>{post.title}</strong></span>
 				  </Link>
 				</li>

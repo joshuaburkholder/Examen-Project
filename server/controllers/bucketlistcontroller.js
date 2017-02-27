@@ -6,13 +6,13 @@ exports.addBucketList = function(req, res, next){
 	// var topic = req.body.topic;
 	// var url = req.body.url;
 	// var content = req.body.content;
-	// var specificUser = req.body.specificUser;
+	// var specificUser = req.user._id;
 
 	var title = req.body.props.title;
 	var topic = req.body.props.topic;
 	var url = req.body.props.url;
 	var content = req.body.props.content;
-	var specificUser = req.body.props.specificUser;
+	var specificUser = req.user._id;
 
 	var bucketlist = new BucketList({
 		title: title,
