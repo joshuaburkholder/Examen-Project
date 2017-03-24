@@ -21,15 +21,15 @@ class NavBarHeader extends Component {
 			<Navbar>
 		    <Navbar.Header>
 		      <Navbar.Brand>
-		        <a href="#">BucketList</a>
+		        <a href="#">eXamen</a>
 		      </Navbar.Brand>
 		    </Navbar.Header>
 		    <Nav>
 		      {this.renderLinks()}
-		      <NavDropdown key={3} title="Cool Stuff" id="basic-nav-dropdown">
-		        <MenuItem key={3.1}>Action</MenuItem>
-		        <MenuItem key={3.2}>Another action</MenuItem>
-		        <MenuItem key={3.3}>Something else here</MenuItem>
+		      <NavDropdown key={3} title="more mindfulness" id="basic-nav-dropdown">
+		        <MenuItem key={3.1} href="http://www.ignatianspirituality.com/" target="_blank">Ignatian Spirituality</MenuItem>
+		        <MenuItem key={3.2} href="http://www.wayfindinglife.org/">Wayfinding </MenuItem>
+		        <MenuItem key={3.3} href="https://cac.org/category/daily-meditations/">Center for Action & Contemplation</MenuItem>
 		        <MenuItem divider />
 		        <MenuItem key={3.4}>Separated link</MenuItem>
 		      </NavDropdown>

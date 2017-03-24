@@ -39,7 +39,7 @@ export function signinUser({ email, password }){
 
 export function signupUser({ email, password }){
 	return function(dispatch){
-		axios.post(`${ROOT_URL}/signup`, {email, password})
+		axios.post(`${ROOT_URL}/signup`, { email, password })
 		  .then(response => {
 		  	dispatch({ type: AUTH_USER });
 
@@ -72,6 +72,36 @@ export function fetchPosts(){
 				type: FETCH_POSTS,
 				payload: response
 			});
+		});
+	}
+}
+
+//fetch posts individual id
+
+export function fetchPost(id) {
+	return function(dispatch) {
+		axios.get(`${ROOT_URL}/items/${id}`, config)
+		.then( (response) => {
+			console.log("Response", response);
+			dispatch({
+				type: FETCH_POST,
+				payload: response
+			});
+		});
+	}
+}
+
+//deletePost for axios
+
+export function deletePost(id) {
+	return function(dispatch) {
+		axios.delete(`${ROOT_URL}/items/${id}`, config)
+		.then( (response) => {
+			dispatch({
+				type: DELETE_POST,
+				payload: response
+			});
+			browserHistory.push("/items")
 		});
 	}
 }

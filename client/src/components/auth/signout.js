@@ -8,7 +8,15 @@ class Signout extends Component {
 	}
 	
 	render(){
-		return <div>Sorry to see you go . . . </div>
+		return <div>
+				<p>May the road rise up to meet you.</p>
+				<p>May the wind be always at your back.</p>
+				<p>May the sun shine warm upon your face;</p>
+				<p>the rains fall soft upon your fields and until we meet again,</p>
+				<p>may God hold you in the palm of His hand.</p>
+					<h6>traditional gaelic blessing</h6>
+
+  			   </div>
 	}
 }
 

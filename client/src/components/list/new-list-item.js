@@ -3,16 +3,18 @@ import { reduxForm } from 'redux-form';
 import { createPost } from '../../actions/index';
 import { Link } from 'react-router';
 
+
 class ListItems extends Component{
 	handleFormSubmit(formProps){
 		//call action creator to sign up the user
 		this.props.createPost(formProps);
 	}	
 	render(){
-		const { fields: {title, topic, url, content }, handleSubmit } = this.props;
+		const { fields: { title, topic, url, content }, handleSubmit } = this.props;
 		return (
 			<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
 				<h3>Create a New Post</h3>
+
 
 			<fieldset className="form-group">
 				<label>Title</label>
