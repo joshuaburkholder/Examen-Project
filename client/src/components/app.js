@@ -10,7 +10,7 @@ import Signup from './auth/signup';
 		render(){
 
 			return (
-				<div>
+				<div className="wrapper">
 				  <NavBarHeader />
   				  <Video />
    				  {this.props.children}

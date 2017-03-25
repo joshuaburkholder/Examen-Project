@@ -15,7 +15,7 @@ class Video extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('three minute meditation');
+    this.videoSearch('three minute meditation, music');
   }
 
   videoSearch(term) {
@@ -23,7 +23,7 @@ class Video extends Component {
       console.log(videos);
       this.setState({ 
         videos: videos,
-        selectedVideo: videos[1]
+        selectedVideo: videos[Math.floor(Math.random() * (0 + 5))]
       }); // this.setState({videos})same as this.setState({videos: videos})
     });
   }

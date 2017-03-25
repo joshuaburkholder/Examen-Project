@@ -1,3 +1,12 @@
+.wrapper {
+	background: lightgray;
+	height: 80vh;
+	border-radius: 12px;
+	box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.5);
+	margin-top: 5vh;
+	padding: 5px 5px 5px 5px;
+}
+
 .search-bar {
 	margin: 20px;
 	text-align: left;
