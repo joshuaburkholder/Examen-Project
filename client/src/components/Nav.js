@@ -27,11 +27,12 @@ class NavBarHeader extends Component {
 		    <Nav>
 		      {this.renderLinks()}
 		      <NavDropdown key={3} title="more mindfulness" id="basic-nav-dropdown">
-		        <MenuItem key={3.1} href="http://www.ignatianspirituality.com/" target="_blank">Ignatian Spirituality</MenuItem>
-		        <MenuItem key={3.2} href="http://www.wayfindinglife.org/">Wayfinding </MenuItem>
-		        <MenuItem key={3.3} href="https://cac.org/category/daily-meditations/">Center for Action & Contemplation</MenuItem>
+		        <MenuItem key={3.1} href="http://www.catholicfamilyfaith.com/2015/09/weekly-examen.html" target="_blank">Weekly Family Examen</MenuItem>
+		        <MenuItem key={3.2} href="http://www.faith5.org/" target="_blank">Faith 5 for Families</MenuItem>
+		        <MenuItem key={3.3} href="http://www.ignatianspirituality.com/24449/take-lord-receive-work-career-suscipe" target="_blank">Work & Career</MenuItem>
+		        <MenuItem key={3.4} href="http://www.ignatianspirituality.com/24672/the-money-examen" target="_blank">Money Examen </MenuItem>
 		        <MenuItem divider />
-		        <MenuItem key={3.4}>Separated link</MenuItem>
+		        <MenuItem key={3.5} href="http://www.ignatianspirituality.com/ignatian-prayer/the-examen" target="_blank">About Examen</MenuItem>
 		      </NavDropdown>
 		    </Nav>
 		  </Navbar>
@@ -46,3 +47,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(NavBarHeader);
+
