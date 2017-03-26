@@ -9,12 +9,12 @@ class Signout extends Component {
 	
 	render(){
 		return <div>
-				<p>May the road rise up to meet you.</p>
-				<p>May the wind be always at your back.</p>
-				<p>May the sun shine warm upon your face;</p>
-				<p>the rains fall soft upon your fields and until we meet again,</p>
-				<p>may God hold you in the palm of His hand.</p>
-					<h6>traditional gaelic blessing</h6>
+				<h3>May the road rise up to meet you.</h3>
+				<h3>May the wind be always at your back.</h3>
+				<h3>May the sun shine warm upon your face and</h3>
+				<h3>the rains fall soft upon your fields, until we meet again...</h3>
+				<p></p>
+					<h6>-traditional gaelic blessing</h6>
 
   			   </div>
 	}
