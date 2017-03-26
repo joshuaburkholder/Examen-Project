@@ -13,27 +13,27 @@ class ListItems extends Component{
 		const { fields: { title, topic, url, content }, handleSubmit } = this.props;
 		return (
 			<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-				<h3>Create a New Post</h3>
-
+				<h3>Examen Your Day</h3>
+				<p>Take some time to review the day. As your memories come forward, pay attention to how your body responds and what emotions you feel. When ready, complete the Examen form below.</p>
 
 			<fieldset className="form-group">
-				<label>Title</label>
-				<input type="text" className="form-control" {...title} />
+				<label>Today's grace</label>
+				<input type="text" className="form-control" placeholder="I am thankful for..." {...title} />
 			</fieldset>
 
 			<fieldset className="form-group">
-				<label>Category</label>
-				<input type="text" className="form-control" {...topic} />
+				<label>Today's discomfort</label>
+				<input type="text" className="form-control" placeholder="I was uncomfortable when..." {...topic} />
 			</fieldset>
 
 			<fieldset className="form-group">
-				<label>URL</label>
-				<input type="text" className="form-control" {...url} />
+				<label>Worth Remembering</label>
+				<input type="text" className="form-control" placeholder="I want to hold onto..." {...url} />
 			</fieldset>
 
 			<fieldset className="form-group">
-				<label>Content</label>
-				<textarea type="text" rows="8" className="form-control text" {...content} />
+				<label>Tomorrow</label>
+				<textarea type="text" rows="3" className="form-control text" placeholder="Look toward the day to come with hopeful resolution . . . " {...content} />
 			</fieldset>
 
 			<button action="submit" className="btn btn-primary">Submit</button>
