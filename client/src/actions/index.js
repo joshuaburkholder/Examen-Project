@@ -18,12 +18,6 @@ export function authError(error){
 	};
 }
 
-export function signoutUser(){
-	localStorage.removeItem('token');
-
-	return {type: UNAUTH_USER};
-}
-
 export function signinUser({ email, password }){
 	return function(dispatch){
 		axios.post(`${ROOT_URL}/signin`, {email, password})
@@ -37,6 +31,12 @@ export function signinUser({ email, password }){
 	}
 }
 
+export function signoutUser(){
+	localStorage.removeItem('token');
+
+	return {type: UNAUTH_USER};
+}
+
 export function signupUser({ email, password }){
 	return function(dispatch){
 		axios.post(`${ROOT_URL}/signup`, { email, password })
@@ -44,7 +44,7 @@ export function signupUser({ email, password }){
 		  	dispatch({ type: AUTH_USER });
 
 		  	localStorage.setItem('token', response.data.token);
-		  	browserHistory.push('/newitem');
+		  	browserHistory.push('/items');
 		  })
 		  .catch(response => dispatch(authError(response.data.error)));
 	}
@@ -56,6 +56,19 @@ export function createPost(props){
 		.then(request => {
 			dispatch({
 				type: CREATE_POSTS,
+				payload: request
+			});
+			browserHistory.push('/items');
+		});
+	}
+}
+
+export function updatePost(props, id) {
+	return function(dispatch) {
+		axios.put(`${ROOT_URL}/items/${id}`, { props }, config)
+		.then( (request) => {
+			dispatch({
+				type: UPDATE_POST,
 				payload: request
 			});
 			browserHistory.push('/items');
