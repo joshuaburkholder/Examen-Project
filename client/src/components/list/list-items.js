@@ -14,7 +14,7 @@ class ListItems extends Component {
 		super(props);
 
 		this.state = {
-			posts: []
+			posts : []
 		}
 	}
 	componentWillMount(){
@@ -24,7 +24,7 @@ class ListItems extends Component {
 			const posts = response.data;
 			console.log("Response", response)
 			this.setState({
-				posts: [...posts]
+				posts: [ ...posts ]
 			})
 		})
 	}

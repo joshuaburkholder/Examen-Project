@@ -45,5 +45,5 @@ class ListItems extends Component{
 
 export default reduxForm({
 	form: 'ListsNewForm',
-	fields: ['title', 'topic', 'url', 'content']
+	fields: [ 'title', 'topic', 'url', 'content']
 }, null, { createPost })(ListItems);

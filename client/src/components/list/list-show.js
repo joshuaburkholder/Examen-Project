@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, browserHistory } from 'react-router';
-import { fetchPost, deletePost } from '../..actions/index';
+import { fetchPost, deletePost } from '../../actions/index';
 import axios from 'axios';
 
 const ROOT_URL = 'http://localhost:3000';
@@ -26,15 +26,11 @@ class ListShow extends Component {
 				this.setState({
 					post: response.data
 				})
-			})		;
+			});
 	}
 
 	onDeleteClick() {
 		this.props.deletePost(this.props.params.id);
-	}
-
-	getPath() {
-		return '/updateitems' + path;
 	}
 
 	render() {
@@ -50,20 +46,30 @@ class ListShow extends Component {
 
 		return (
 			<div>
-
-				<h3>{post.title}</h3>
+				<div className="lister">
+      			<p>{post.url}</p>
+				</div>
 				<div id="space"></div>
-				<h6>Topic: {post.topic}</h6>
+				<div className="lister2">
+				<p>{post.title}</p>
+				</div>
 				<div id="space"></div>
+				<div className="lister3">
+				<p>{post.topic}</p>
+				</div>
+				<div id="space"></div>
+				<div className="lister4">
 				<p>{post.content}</p>
-				<Link to="/items" className="btn btn-primary">Back to Post List</Link>
-				
-				<Link to={`/updateitem/${this.props.params.id}`} className="btn btn-info">Update List</Link>
+				</div>
+				<div id="space"></div>
+							
 
+				<Link to="/items" className="btn btn-success">Back to Post List</Link>
 				<button className="btn btn-danger"
 					onClick={this.onDeleteClick.bind(this)}>
 					Delete Post
 				</button>
+
 			</div>	
 		);
 	}

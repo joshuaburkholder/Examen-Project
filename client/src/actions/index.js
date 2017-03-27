@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, CREATE_POSTS, FETCH_POSTS } from './types';
+import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, CREATE_POSTS, DELETE_POST, FETCH_POST, FETCH_POSTS } from './types';
 import authReducer from '../reducers/auth_reducer';
 
 

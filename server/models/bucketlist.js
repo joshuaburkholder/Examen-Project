@@ -2,9 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var BucketListSchema = new Schema({
-	date: {
-		date: Date,
-	},
+
 	title: {
 		type: String,
 		default: ''
