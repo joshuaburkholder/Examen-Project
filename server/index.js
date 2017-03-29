@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 
 //DB connection
-mongoose.connect('mongodb://localhost:bucket/bucket');
+mongoose.connect('mongodb://plevoh:5$IOdkd#MI5q54chuml@ds143980.mlab.com:43980/buckets');
 
 app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
