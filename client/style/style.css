@@ -1,14 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+  background-color: : blue;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#nh1 {
+	width: 100vw;
+	height: 150px;
+	background: solid blue;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+
 .wrapper {
-	background: lightgray;
-	height: 88vh;
+	background: rgba(255,255,255,0.2);
+	border: 4px solid white;
+	height: 40vh;
+	width: 400px;
+	margin-top: 60vh;
+	margin-left: 40px !important;
 	border-radius: 12px;
 	box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.5);
-	margin-top: 5vh;
+	margin-top: 30vh;
 	padding: 5px 5px 5px 5px;
+	z-index: 1;
 }
 
 .search-bar {
-	margin: 20px;
+	display: block;
+	width: 100%;
 	text-align: left;
 }
 
@@ -23,11 +48,12 @@
 	width: 25%;
 }
 
-.video-item img {
+/*.video-item img {
 	max-width: 64px;
-}
+}*/
 
 .details {
+	color: white;
 	margin-top: 10px;
 	padding: 10px;
 	border:	2px solid orange;
@@ -82,4 +108,71 @@
 
 .btn {
 	margin: 10px 10px 10px 10px;
+}
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  top: 0;
+/*  bottom: 0;*/
+  min-width: 100vw; 
+  min-height: 100vh;
+  z-index: -100;
+  padding: 0;
+}
+
+
+.embed-responsive-item {
+	width: 100%;
+	min-height: 100%;
+}
+
+.wholepage {
+	width: 100vw;
+	height: 100vh;
+}
+
+iframe {
+	width: 110vw;
+	height: 110vh;
+	z-index: -100;
+	margin-top: 0;
+	overflow: hidden;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px; 
+	height: 100%;
+}
+
+/*.videoWrapper {
+	position: relative;
+	padding-bottom: 0px;
+	padding-top: 25px;
+	height: 0;
+}
+*/
+.video object,
+.video  embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	object-fit:fill;
+	overflow: hidden;
+	overflow-x:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px; 
+}
+
+.buttonLinks {
+	float: right !important;
 }
